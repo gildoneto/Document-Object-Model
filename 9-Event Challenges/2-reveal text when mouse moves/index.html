@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      .dot {
+        background-color: black;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 2px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="bg" src="./bg.jpg" width="300px" height="200px" />
+    <div id="message"></div>
+    <script>
+      let background = document.getElementById("bg");
+
+      let onMouseMove = (e) => {
+        let msg = document.getElementById("message");
+        msg.textContent += "Hi ";
+        // criar uma nova div
+        let dotDiv = document.createElement("div");
+        dotDiv.className = "dot";
+        document.body.appendChild(dotDiv);
+
+        dotDiv.style.top = `${e.clientY}px`;
+        dotDiv.style.left = `${e.clientX}px`;
+      };
+
+      background.addEventListener("mousemove", onMouseMove);
+    </script>
+  </body>
+</html>
