@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Clonando Elementos</title>
+    <style>
+      body {
+        background-color: rgb(74 59 206);
+        padding: 30px;
+      }
+      h1 {
+        color: #14fff7;
+        font-size: 72px;
+        font-family: sans-serif;
+        text-decoration: underline;
+      }
+      p {
+        color: #14fff7;
+        font-size: 36px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Am I Real?</h1>
+    <p class="message">Am I a figment of your imagination?</p>
+
+    <script>
+      // vamos pegar nosso body, assim como o item que queremos clonar
+      let bodyElement = document.querySelector("body");
+      let paraElement = document.querySelector(".message");
+
+      // vamos definir nossa função
+      function sayWhat() {
+        let clonedText = paraElement.cloneNode(true);
+        bodyElement.appendChild(clonedText);
+      }
+
+      // vamos usar uma função da DOM (do objetoWindow)
+      // não é uma função do JavaScript
+      //setInterval(sayWhat, 1000);
+    </script>
+  </body>
+</html>

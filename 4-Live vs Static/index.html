@@ -1,0 +1,35 @@
+<html>
+  <head></head>
+  <body>
+    <ul>
+      <li>Bam</li>
+      <li>Pow</li>
+      <li>Kazaamm</li>
+    </ul>
+    <script>
+      // ****** HTML COLLECTION
+      // // vamos acessar nos lista de itens
+      // let listItems_tags = document.getElementsByTagName("li");
+      // console.log(listItems_tags);
+      // console.log(listItems_tags.length);
+
+      // // vamos modificar o DOM e adicionar um item na lista
+      // listItems_tags[0].parentNode.appendChild(document.createElement("li"));
+      // console.log(listItems_tags);
+      // console.log(listItems_tags.length);
+
+      // ****** NODE LIST
+      let listItems = document.querySelectorAll("li");
+      console.log(listItems);
+      console.log(listItems.length);
+      // vamos adicionar à lista e provar que o NodeList é estático
+      listItems[0].parentNode.appendChild(document.createElement("li"));
+      console.log(listItems);
+      console.log(listItems.length);
+      // vamos fazer outra query na DOM
+      listItems = document.querySelectorAll("li");
+      console.log(listItems);
+      console.log(listItems.length);
+    </script>
+  </body>
+</html>

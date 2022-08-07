@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <ul>
+      <!-- Esses são meus itens irados -->
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <script>
+      let ul = document.getElementsByTagName("ul")[0];
+      let ulElements = ul.children;
+      let ulNodes = ul.childNodes;
+      let ulElementsLength = ul.childElementCount;
+      console.log(
+        `The ul have ${ulElementsLength} elements
+The ul have ${ulNodes.length} nodes`
+      );
+    </script>
+  </body>
+</html>

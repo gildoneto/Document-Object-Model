@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <!-- event listener -->
+    <button>Click me</button>
+    <script>
+      // passo 1: ache o elemento que voce deseja adicionar o event listener
+      let btn = document.querySelector("button");
+      // passo 2: adicione o eventListener ao botão
+      btn.addEventListener("click", boom);
+
+      function boom() {
+        alert("BOOM!");
+      }
+    </script>
+  </body>
+</html>

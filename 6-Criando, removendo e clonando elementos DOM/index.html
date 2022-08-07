@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Criando Elementos</title>
+    <style>
+      body {
+        background-color: rgb(74 59 206);
+        padding: 30px;
+      }
+      h1 {
+        color: #14fff7;
+        font-size: 72px;
+        font-family: sans-serif;
+        text-decoration: underline;
+      }
+      p {
+        color: #14fff7;
+        font-size: 36px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Am I Real?</h1>
+    <script>
+      let newElement = document.createElement("p");
+      newElement.textContent = "Or am I a figment of your imagination?";
+      /* pegando o parent
+      // let bodyElement = document.querySelector("body");
+      // // bodyElement.appendChild(newElement);
+      // // usando o insertBefore()
+      // // vamos achar o sibling que iremos usar
+      // let scriptElement = document.querySelector("script");
+      // // usando o insertBefore
+      // bodyElement.insertBefore(newElement, scriptElement); */
+
+      // pegando o body e a tag h1
+      let h1Element = document.querySelector("h1");
+      let bodyElement = document.querySelector("body");
+      // hackeando a função insertBefore()
+      let h1NextElement = h1Element.nextElementSibling;
+      bodyElement.insertBefore(newElement, h1NextElement);
+    </script>
+  </body>
+</html>
