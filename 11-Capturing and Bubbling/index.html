@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <div id="three-a">
+      <button id="button1">Button one</button>
+    </div>
+    <script>
+      let buttonOne = document.getElementById("button1");
+
+      // capturing phase - root -> element
+      buttonOne.addEventListener("click", clickHandler, true);
+
+      // bubbling phase (default) - element -> phase
+      buttonOne.addEventListener("click", clickHandler, false);
+
+      let threeA = document.getElementById("three-a");
+      threeA.addEventListener("click", quitIt, true);
+
+      function quitIt(e) {
+        console.log("Você parou a propagação");
+        e.stopPropagation();
+      }
+
+      function clickHandler() {
+        console.log("Fui clicado");
+      }
+    </script>
+  </body>
+</html>
